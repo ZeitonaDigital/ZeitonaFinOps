@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CiviBIM — BIM for Cost Estimation & Quantity Takeoffs</title>
+  <meta name="description" content="Hands-on BIM training for construction teams, developers, and engineering firms. Learn to use BIM as a real decision tool for cost estimation, quantity takeoffs and budget planning." />
+  <meta name="keywords" content="BIM training, cost estimation, quantity takeoff, AEC, construction, budget, BIM cost control" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CiviBIM — BIM for Cost & Budget Decision-Making" />
+  <meta property="og:description" content="Practical BIM training designed for construction companies and engineering firms who need real project outcomes." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo" aria-label="CiviBIM Home">
+        <span class="nav__logo-mark">Civi</span><span class="nav__logo-accent">BIM</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#problem" class="nav__link">The Problem</a></li>
+        <li><a href="#training" class="nav__link">Training</a></li>
+        <li><a href="#process" class="nav__link">How It Works</a></li>
+        <li><a href="#outcomes" class="nav__link">Outcomes</a></li>
+        <li><a href="#cta" class="nav__cta-link">Request a Session</a></li>
+      </ul>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-headline">
+      <div class="hero__grid-overlay" aria-hidden="true"></div>
+      <div class="hero__particles" aria-hidden="true" id="hero-particles"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            BIM Training for AEC Professionals
+          </div>
+
+          <h1 class="hero__headline" id="hero-headline">
+            Turn Your BIM Model Into a<br />
+            <span class="accent">Cost Decision Tool</span>
+          </h1>
+
+          <p class="hero__sub">
+            Most teams use BIM for design and coordination. We train yours to extract quantities, run cost estimates, and make budget decisions — directly from the model.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#cta" class="btn btn--primary" id="hero-cta-primary">Request a Training Session</a>
+            <a href="#process" class="btn btn--ghost" id="hero-cta-secondary">See How It Works</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__value">100%</span>
+              <span class="stat__label">Project-based</span>
+            </div>
+            <div class="stat__divider" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__value">Real</span>
+              <span class="stat__label">Workflow outcomes</span>
+            </div>
+            <div class="stat__divider" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__value">AEC</span>
+              <span class="stat__label">Industry-specific</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__model-card">
+            <div class="model-card__header">
+              <span class="model-card__dot model-card__dot--red"></span>
+              <span class="model-card__dot model-card__dot--yellow"></span>
+              <span class="model-card__dot model-card__dot--green"></span>
+              <span class="model-card__title">cost_model_v3.ifc</span>
+            </div>
+            <div class="model-card__body">
+              <div class="model-lines">
+                <div class="model-line">
+                  <span class="model-line__label">Structural Concrete</span>
+                  <span class="model-line__bar"><span class="model-line__fill" style="--w:78%"></span></span>
+                  <span class="model-line__val">1,248 m³</span>
+                </div>
+                <div class="model-line">
+                  <span class="model-line__label">Rebar (CA-50)</span>
+                  <span class="model-line__bar"><span class="model-line__fill" style="--w:55%"></span></span>
+                  <span class="model-line__val">87,400 kg</span>
+                </div>
+                <div class="model-line">
+                  <span class="model-line__label">Masonry Walls</span>
+                  <span class="model-line__bar"><span class="model-line__fill" style="--w:91%"></span></span>
+                  <span class="model-line__val">3,604 m²</span>
+                </div>
+                <div class="model-line">
+                  <span class="model-line__label">Waterproofing</span>
+                  <span class="model-line__bar"><span class="model-line__fill" style="--w:43%"></span></span>
+                  <span class="model-line__val">892 m²</span>
+                </div>
+                <div class="model-line">
+                  <span class="model-line__label">MEP Roughing</span>
+                  <span class="model-line__bar"><span class="model-line__fill" style="--w:62%"></span></span>
+                  <span class="model-line__val">variable</span>
+                </div>
+              </div>
+              <div class="model-card__footer">
+                <span class="model-pill model-pill--blue">Est. Budget: R$ 4.2M</span>
+                <span class="model-pill model-pill--green">Δ –3.1% vs baseline</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROBLEM ═══════════════ -->
+    <section class="section section--light" id="problem" aria-labelledby="problem-headline">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">01 — The Problem</div>
+        <h2 class="section__headline" id="problem-headline">
+          BIM is everywhere.<br />Cost intelligence is not.
+        </h2>
+        <p class="section__sub">
+          The AEC industry has invested heavily in BIM adoption — but most of that investment stops at coordination and clash detection. When it comes to cost, teams still fall back on spreadsheets and disconnected workflows.
+        </p>
+
+        <div class="problem-grid">
+          <div class="problem-card" id="problem-card-1">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="problem-card__title">Models built for geometry, not finance</h3>
+            <p class="problem-card__body">BIM models are structured for design intent. Without proper parameters, naming conventions, and cost classification embedded in the model, quantity extraction becomes unreliable — or impossible.</p>
+          </div>
+
+          <div class="problem-card" id="problem-card-2">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="problem-card__title">Teams that model and teams that budget don't talk</h3>
+            <p class="problem-card__body">Design and estimating departments operate independently. The result: late-stage budget surprises, rework, and scope changes that could have been caught weeks earlier with connected data.</p>
+          </div>
+
+          <div class="problem-card" id="problem-card-3">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="problem-card__title">No structured process for BIM-based cost decisions</h3>
+            <p class="problem-card__body">Most teams don't have a repeatable workflow to go from model to budget. Each project starts from scratch — manual exports, inconsistent quantity lists, and estimates disconnected from the model.</p>
+          </div>
+
+          <div class="problem-card" id="problem-card-4">
+            <div class="problem-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="17" y1="21" x2="17" y2="11"/><line x1="9" y1="21" x2="9" y2="3"/><line x1="13" y1="21" x2="13" y2="3"/><line x1="5" y1="21" x2="5" y2="15"/><line x1="21" y1="21" x2="1" y2="21"/></svg>
+            </div>
+            <h3 class="problem-card__title">Training that teaches software, not decision-making</h3>
+            <p class="problem-card__body">Generic BIM courses focus on tools and commands. They don't teach teams how to structure a model for cost, how to validate quantities, or how to use the output in a real project budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TRAINING OFFER ═══════════════ -->
+    <section class="section section--dark" id="training" aria-labelledby="training-headline">
+      <div class="training__grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label section-label--light" aria-hidden="true">02 — The Training</div>
+        <h2 class="section__headline section__headline--light" id="training-headline">
+          Hands-on training built around<br /><span class="accent">your real projects</span>
+        </h2>
+        <p class="section__sub section__sub--light">
+          Not a certification course. Not vendor-sponsored content. A structured, applied program designed to give your team the skills to use BIM as an active cost tool — starting with your next project.
+        </p>
+
+        <div class="training-modules">
+          <div class="training-module" id="module-1">
+            <div class="training-module__number" aria-hidden="true">01</div>
+            <div class="training-module__content">
+              <h3 class="training-module__title">Quantity Extraction from BIM</h3>
+              <p class="training-module__desc">Learn how to configure model parameters, apply classification systems, and extract reliable quantity schedules from Revit and IFC-based models. Move from raw geometry to structured, auditable data.</p>
+              <ul class="training-module__bullets">
+                <li>Model parameter setup for cost use</li>
+                <li>Element classification (Omniclass / NBS / custom)</li>
+                <li>Schedule configuration and validation rules</li>
+                <li>Export to cost workflows (Excel, ERP, estimation tools)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="training-module" id="module-2">
+            <div class="training-module__number" aria-hidden="true">02</div>
+            <div class="training-module__content">
+              <h3 class="training-module__title">Cost Estimation Workflows</h3>
+              <p class="training-module__desc">Build a repeatable bridge between BIM and your cost estimation process. Apply unit pricing, scope structuring, and progressive estimate maturity aligned to project phases.</p>
+              <ul class="training-module__bullets">
+                <li>Linking quantities to cost databases</li>
+                <li>Estimate maturity by design stage</li>
+                <li>Scope gap identification from model analysis</li>
+                <li>Review and audit procedures for BIM-based estimates</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="training-module" id="module-3">
+            <div class="training-module__number" aria-hidden="true">03</div>
+            <div class="training-module__content">
+              <h3 class="training-module__title">Structuring Models for Budgeting</h3>
+              <p class="training-module__desc">Understand what a "cost-ready" model looks like and how to get there. Establish internal standards and review checkpoints that make every future model more useful — not just for design, but for financial decisions.</p>
+              <ul class="training-module__bullets">
+                <li>Model authoring standards for cost compatibility</li>
+                <li>LOD for cost vs. LOD for coordination</li>
+                <li>Internal BIM templates and naming conventions</li>
+                <li>QC checklists before quantity extraction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="training-note" id="training-note">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+          Each module is adapted to your team's tools, project types, and existing BIM maturity level.
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+    <section class="section section--light" id="process" aria-labelledby="process-headline">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">03 — How It Works</div>
+        <h2 class="section__headline" id="process-headline">From assessment to results</h2>
+        <p class="section__sub">A structured engagement with a clear start, defined checkpoints, and measurable outcomes.</p>
+
+        <div class="process-steps">
+          <div class="process-step" id="step-1">
+            <div class="process-step__num" aria-label="Step 1">01</div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Assessment</h3>
+              <p class="process-step__desc">We review your current BIM workflows, tools, and team capabilities. We map the gap between your current process and a cost-ready BIM setup — and design the training around it.</p>
+            </div>
+          </div>
+
+          <div class="process-step" id="step-2">
+            <div class="process-step__num" aria-label="Step 2">02</div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Training</h3>
+              <p class="process-step__desc">Hands-on sessions using your actual project files. Your team works through real scenarios — quantity extraction, model configuration, estimation linkage — with direct guidance.</p>
+            </div>
+          </div>
+
+          <div class="process-step" id="step-3">
+            <div class="process-step__num" aria-label="Step 3">03</div>
+            <div class="process-step__connector" aria-hidden="true"></div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Application</h3>
+              <p class="process-step__desc">Your team applies the new workflow to an active or upcoming project. We review outputs, identify friction points, and refine the process to match your internal standards.</p>
+            </div>
+          </div>
+
+          <div class="process-step" id="step-4">
+            <div class="process-step__num" aria-label="Step 4">04</div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Results</h3>
+              <p class="process-step__desc">A documented workflow your team can repeat. Quality-checked quantity schedules from BIM, a repeatable estimation process, and the internal knowledge to improve it over time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ OUTCOMES ═══════════════ -->
+    <section class="section section--navy" id="outcomes" aria-labelledby="outcomes-headline">
+      <div class="container">
+        <div class="section-label section-label--light" aria-hidden="true">04 — Outcomes</div>
+        <h2 class="section__headline section__headline--light" id="outcomes-headline">
+          What changes after training
+        </h2>
+
+        <div class="outcomes-grid">
+          <div class="outcome-card" id="outcome-1">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="outcome-card__title">More accurate cost estimates</h3>
+            <p class="outcome-card__body">Quantities come directly from the model — not manually measured. Fewer assumption gaps, fewer revision cycles, and more confidence in early-stage numbers.</p>
+          </div>
+
+          <div class="outcome-card" id="outcome-2">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="outcome-card__title">Better decisions in early project phases</h3>
+            <p class="outcome-card__body">When design options can be quickly evaluated for cost impact, teams make faster and more informed go/no-go decisions — before commitments are locked.</p>
+          </div>
+
+          <div class="outcome-card" id="outcome-3">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+            </div>
+            <h3 class="outcome-card__title">Connected design and finance workflows</h3>
+            <p class="outcome-card__body">A shared language between modeling and estimating teams. Instead of siloed handoffs, your project data flows from model to budget with defined checkpoints and accountability.</p>
+          </div>
+
+          <div class="outcome-card" id="outcome-4">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="outcome-card__title">Reusable internal standards</h3>
+            <p class="outcome-card__body">Templates, checklists, and documented workflows your team owns. The training produces deliverables, not just knowledge — so the process lives on after the sessions end.</p>
+          </div>
+
+          <div class="outcome-card" id="outcome-5">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 class="outcome-card__title">Reduced cost overruns</h3>
+            <p class="outcome-card__body">Earlier detection of scope gaps and quantity changes means budget surprises are caught in the model — not on the construction site when correction costs far more.</p>
+          </div>
+
+          <div class="outcome-card" id="outcome-6">
+            <div class="outcome-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="outcome-card__title">Faster project handoffs</h3>
+            <p class="outcome-card__body">When BIM data is structured for cost from the start, handoffs between design, estimating, and procurement become faster — because the data is already there and correctly formatted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FUTURE VISION ═══════════════ -->
+    <section class="section section--light vision" id="vision" aria-labelledby="vision-headline">
+      <div class="container vision__inner">
+        <div class="vision__content">
+          <div class="section-label" aria-hidden="true">05 — Looking Ahead</div>
+          <h2 class="section__headline" id="vision-headline">
+            Training is the foundation.<br />The system comes next.
+          </h2>
+          <p class="section__sub">
+            The workflow your team learns through training is not a workaround — it's a methodology. We are building on that same methodology to develop integrated tools and systems that automate and scale what your team does manually today.
+          </p>
+          <p class="vision__body">
+            Companies that adopt structured BIM-to-cost processes now will have a significant operational advantage when purpose-built platforms become available. The knowledge your team gains is not temporary — it's a strategic capability.
+          </p>
+        </div>
+        <div class="vision__diagram" aria-hidden="true">
+          <div class="vision-node vision-node--active" id="vnode-1">
+            <div class="vision-node__circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="vision-node__label">Team Training<br/><small>Now available</small></div>
+          </div>
+          <div class="vision-line" aria-hidden="true"></div>
+          <div class="vision-node" id="vnode-2">
+            <div class="vision-node__circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="vision-node__label">Workflow Systems<br/><small>In development</small></div>
+          </div>
+          <div class="vision-line" aria-hidden="true"></div>
+          <div class="vision-node" id="vnode-3">
+            <div class="vision-node__circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="vision-node__label">Integrated Platform<br/><small>Coming soon</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section class="section section--dark cta-section" id="cta" aria-labelledby="cta-headline">
+      <div class="cta__grid-overlay" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <div class="cta__badge" aria-hidden="true">Ready to start?</div>
+        <h2 class="cta__headline" id="cta-headline">
+          Schedule a session for your team
+        </h2>
+        <p class="cta__sub">
+          Tell us about your current BIM setup and project types. We'll assess your needs and propose a training structure that fits.
+        </p>
+
+        <form class="cta__form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="field-name">Name</label>
+              <input type="text" id="field-name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="field-company">Company</label>
+              <input type="text" id="field-company" name="company" placeholder="Company / firm name" autocomplete="organization" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="field-email">Email</label>
+              <input type="email" id="field-email" name="email" placeholder="your@company.com" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label for="field-role">Role</label>
+              <select id="field-role" name="role">
+                <option value="" disabled selected>Select your role</option>
+                <option value="bim-manager">BIM Manager</option>
+                <option value="project-manager">Project Manager</option>
+                <option value="estimator">Estimator / Quantity Surveyor</option>
+                <option value="developer">Real Estate Developer</option>
+                <option value="engineer">Structural / MEP Engineer</option>
+                <option value="director">Director / Executive</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field form-field--full">
+            <label for="field-message">Tell us about your current setup <span class="optional">(optional)</span></label>
+            <textarea id="field-message" name="message" rows="4" placeholder="What BIM tools do you use? What's your team size? What's the main challenge you're facing?"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary btn--large" id="form-submit">Request a Session</button>
+          </div>
+          <p class="form-disclaimer">No commitments. We'll respond within 48 hours to discuss your needs.</p>
+        </form>
+
+        <div class="cta__form-success" id="form-success" style="display:none;" role="status" aria-live="polite">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Message received.</h3>
+          <p>We'll be in touch within 48 hours to discuss your team's needs and what a training engagement might look like.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo" aria-label="CiviBIM Home">
+          <span class="nav__logo-mark">Civi</span><span class="nav__logo-accent">BIM</span>
+        </a>
+        <p class="footer__tagline">BIM as a cost decision tool.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#problem" class="footer__link">The Problem</a>
+        <a href="#training" class="footer__link">Training</a>
+        <a href="#process" class="footer__link">How It Works</a>
+        <a href="#outcomes" class="footer__link">Outcomes</a>
+        <a href="#cta" class="footer__link">Request a Session</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="footer-year"></span> CiviBIM. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
